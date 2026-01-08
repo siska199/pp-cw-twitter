@@ -43,6 +43,9 @@ const Feeds = () => {
           src={session?.user?.image}
           alt=""
           className="w-[2.5rem] h-[2.5rem] border-[0.005rem] sm:hidden rounded-full"
+          onError={(e) => {
+            e.currentTarget.src = "/assets/no-pictures.webp";
+          }}
         />
         <img
           src="assets/logo-twitter.webp"
